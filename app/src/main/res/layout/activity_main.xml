@@ -3,6 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/idDrawerLayout"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
@@ -10,7 +12,16 @@
     <com.google.android.material.navigation.NavigationView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/header_drawer"
         app:menu="@menu/menu_drawer"/>
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/idToolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:navigationIcon="@drawable/baseline_menu"
+        />
 
 
 </androidx.drawerlayout.widget.DrawerLayout>
